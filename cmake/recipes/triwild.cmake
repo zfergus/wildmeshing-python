@@ -6,5 +6,8 @@ endif()
 
 message(STATUS "Third-party: creating target 'triwild::triwild'")
 
+# Make sure the libigl predicates are enabled
+set(LIBIGL_PREDICATES ON CACHE BOOL "Use exact predicates" FORCE)
+
 include(CPM)
-CPMAddPackage("gh:zfergus/TriWild#ebb8a6abd0554bac577a18ccfa5dc05802fe3db7")
+CPMAddPackage("gh:zfergus/TriWild#a9ffc6db5d9bf12184c3c4f2326550fe91e97e2a")

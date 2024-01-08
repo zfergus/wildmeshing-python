@@ -58,10 +58,7 @@ endif()
 
 project(WildMeshing
 		DESCRIPTION "Python bindings for WildMeshing"
-		LANGUAGES CXX)
-
-# option(FLOAT_TETWILD_WITH_EXACT_ENVELOPE    "Use exact envelope"        ON)
-option(LIBIGL_WITH_PREDICATES        "Use exact predicates"         ON)
+		LANGUAGES C CXX)
 
 # Set default minimum C++ standard
 if(WILDMESHING_TOPLEVEL_PROJECT)
@@ -99,24 +96,23 @@ pybind11_add_module(wildmeshing
 
 target_include_directories(wildmeshing PRIVATE src)
 
-
 set_target_properties(wildmeshing PROPERTIES PREFIX "${PYTHON_MODULE_PREFIX}" SUFFIX "${PYTHON_MODULE_EXTENSION}")
 
 ################################################################################
 # Dependencies
 ################################################################################
 
-# tetwild
-include(ftetwild)
-target_link_libraries(wildmeshing PRIVATE ftetwild::ftetwild)
-
 # triwild
 include(triwild)
-target_link_libraries(wildmeshing PRIVATE triwild::triwild)
+target_link_libraries(wildmeshing PUBLIC triwild::triwild)
+
+# tetwild
+include(ftetwild)
+target_link_libraries(wildmeshing PUBLIC ftetwild::ftetwild)
 
 #for testing purpose
 include(wildmeshing_data)
-target_link_libraries(wildmeshing PRIVATE wildmeshing::data)
+target_link_libraries(wildmeshing PUBLIC wildmeshing::data)
 
 # Extra warnings (link last for highest priority)
 include(wildmeshing_warnings)

@@ -7,4 +7,4 @@ endif()
 message(STATUS "Third-party: creating target 'ftetwild::ftetwild'")
 
 include(CPM)
-CPMAddPackage("gh:zfergus/fTetWild#4f854061c6e0d635d2a3711c074544c52896d8d9")
+CPMAddPackage("gh:zfergus/fTetWild#5f9656a7e3c62d61c0993635bde3f75d0287566f")
