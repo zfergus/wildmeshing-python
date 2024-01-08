@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Utils.hpp"
+#include "utils.hpp"
 
 #include <floattetwild/Mesh.hpp>
 #include <floattetwild/AABBWrapper.h>

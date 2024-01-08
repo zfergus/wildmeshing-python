@@ -17,7 +17,7 @@ class TetrahedralizeTest(unittest.TestCase):
         print(wm.tetrahedralize.__doc__)
 
     def test_run(self):
-        root_folder = os.path.join("..", "3rdparty", "data")
+        root_folder = os.path.join("..", "data")
         dir_path = os.path.dirname(os.path.realpath(__file__))
         mesh_path = os.path.join(dir_path, root_folder, "small.stl")
 
@@ -26,7 +26,7 @@ class TetrahedralizeTest(unittest.TestCase):
 
     def test_data(self):
         root_folder = os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "..", "3rdparty", "data")
+            os.path.realpath(__file__)), "..", "data")
         V = np.load(os.path.join(root_folder, "V.npy"))
         F = np.load(os.path.join(root_folder, "F.npy"))
 
@@ -41,7 +41,7 @@ class TetrahedralizeTest(unittest.TestCase):
             return
 
         root_folder = os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "..", "3rdparty", "data")
+            os.path.realpath(__file__)), "..", "data")
 
         csg_tree = {
             "operation": "difference",
@@ -68,7 +68,7 @@ class TetrahedralizeTest(unittest.TestCase):
             return
 
         root_folder = os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), "..", "3rdparty", "data")
+            os.path.realpath(__file__)), "..", "data")
 
         csg_tree = {
             "operation": "difference",

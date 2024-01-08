@@ -1,4 +1,4 @@
-#include "Utils.hpp"
+#include "utils.hpp"
 
 #include "triangulate_data.hpp"
 #include "triangulate.hpp"

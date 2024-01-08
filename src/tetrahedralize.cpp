@@ -8,7 +8,7 @@
 #include <floattetwild/Statistics.h>
 #include <floattetwild/TriangleInsertion.h>
 #include <floattetwild/CSGTreeParser.hpp>
-#include <floattetwild/MshLoader.h>
+#include <floattetwild/external/MshLoader.h>
 
 #include <floattetwild/Logger.hpp>
 
@@ -24,7 +24,6 @@
 #endif
 
 using namespace floatTetWild;
-using namespace Eigen;
 
 namespace wildmeshing_binding
 {
